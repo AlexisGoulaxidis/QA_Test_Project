@@ -41,16 +41,17 @@ def browser(request):
 			#set language option
 			options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
 			browser = webdriver.Opera(executable_path=OperaDriverManager().install(),options=options)
-		
+		else:
+			raise pytest.UsageError("--browser_name should be opera or firefox")
 		
 		yield browser 
 		#last step of fixture
 		print('\n Quit browser..')
-		time.sleep(5)
+		time.sleep(2)
 		browser.close()
 		browser.quit()
 	except:
-		raise pytest.UsageError("--browser_name should be opera or firefox")
+		raise Exception('I cant open browser, sir! \n Something wrong in "Constest.py"')
 				
 		
 		#pytest -s -v --browser_name=" " --language=" "  test.py  / the way to change browser/language when testing, but browser needs to be installed
