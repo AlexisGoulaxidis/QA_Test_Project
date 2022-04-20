@@ -26,33 +26,30 @@ def browser(request):
 	# Request get Language value from CMD
 	#starting
 	print('\n Start Browser for test')
-	try:
-		if browser_name == 'firefox':
-			print('\n Starting Firefox')
-			fp = webdriver.FirefoxProfile()
-			#set language option
-			fp.set_preference("intl.accept_languages", user_language)
-			browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(),firefox_profile=fp)
-			#Create Pref Options for language in browser in param accept_languages
+	
+	if browser_name == 'firefox':
+		print('\n Starting Firefox')
+		fp = webdriver.FirefoxProfile()
+		#set language option
+		fp.set_preference("intl.accept_languages", user_language)
+		browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(),firefox_profile=fp)
+		#Create Pref Options for language in browser in param accept_languages
 			
-		elif browser_name == 'opera':
-			print('\n Starting Opera')
-			options = Options()
-			#set language option
-			options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-			browser = webdriver.Opera(executable_path=OperaDriverManager().install(),options=options)
-		else:
-			raise pytest.UsageError("--browser_name should be opera or firefox")
+	elif browser_name == 'opera':
+		print('\n Starting Opera')
+		options = Options()
+		#set language option
+		options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
+		browser = webdriver.Opera(executable_path=OperaDriverManager().install(),options=options)
+	else:
+		raise pytest.UsageError("--browser_name should be opera or firefox")
 		
-		yield browser 
+	yield browser 
 		#last step of fixture
-		print('\n Quit browser..')
-		time.sleep(2)
-		browser.close()
-		browser.quit()
-	except:
-		raise Exception('I cant open browser, sir! \n Something wrong in "Constest.py"')
-				
+	print('\n Quit browser..')
+	time.sleep(2)
+	browser.close()
+	browser.quit()
 		
 		#pytest -s -v --browser_name=" " --language=" "  test.py  / the way to change browser/language when testing, but browser needs to be installed
 		

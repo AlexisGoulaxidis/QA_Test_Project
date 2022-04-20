@@ -1,6 +1,7 @@
 #first stage
 
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class BasePage():
@@ -8,6 +9,7 @@ class BasePage():
 		self.browser = browser
 		self.url = url
 		self.browser.implicitly_wait(timeout)
+		self.wait = WebDriverWait(browser, 15)
 	def open(self):
 		self.browser.get(self.url)
 	def is_element_present(self, how, what):   #get NoSuchElement
