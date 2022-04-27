@@ -141,8 +141,6 @@ class TestUserAddToBasketFromProductPage():
 			raise AssertionError
 			
 
-
-
 	def test_user_cant_see_success_message(self, browser):
 		
 		link = 'http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/'
