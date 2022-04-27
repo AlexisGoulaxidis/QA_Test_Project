@@ -28,7 +28,6 @@ class BasketPage(BasePage):
 		
 	def add_item_to_basket(self):
 		
-		#time.sleep(15)
 		self.product_name = self.get_item_name()
 		self.product_price = self.get_item_price()
 		self.browser.find_element(*BasketPageLocators.BASKET_BUTTON).click()
@@ -44,7 +43,6 @@ class BasketPage(BasePage):
 		time.sleep(2)
 		try:
 		
-			#self.wait.until(EC.alert_is_present())
 			alert = self.browser.switch_to.alert
 			print(f'Your code: {alert.text}')
 			alert.accept()
