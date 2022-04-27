@@ -2,6 +2,7 @@ from .base_page import BasePage
 from .locators import LoginPageLocators
 
 class LoginPage(BasePage):
+
     def should_be_login_page(self): #contains the base class
     
         self.should_be_login_url()
@@ -10,7 +11,7 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
     	
-        assert self.browser.current_url == LoginPageLocators.LOGIN_LINK , f'{self.browser.current_url}'
+        assert self.browser.current_url == LoginPageLocators.LOGIN_LINK , f'{Problem in Should_be_login_url   self.browser.current_url}'
 
     def should_be_login_form(self):
     
