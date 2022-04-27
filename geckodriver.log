@@ -1,0 +1,24 @@
+1650193368365	geckodriver	INFO	Listening on 127.0.0.1:43023
+1650193368391	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileykosDp"
+1650193370658	Marionette	INFO	Listening on port 35953
+1650193370710	Marionette	WARN	TLS certificate errors will be ignored for this session
+1650193383862	Marionette	INFO	Stopped listening on port 35953
+1650193592384	geckodriver	INFO	Listening on 127.0.0.1:39209
+1650193592411	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileWKwGva"
+1650193594670	Marionette	INFO	Listening on port 42547
+1650193594740	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 288: NS_ERROR_FAILURE: Should pass a non-null uri
+1650193619018	Marionette	INFO	Stopped listening on port 42547
+1650193662420	geckodriver	INFO	Listening on 127.0.0.1:40097
+1650193662446	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofile5FNIhX"
+1650193664749	Marionette	INFO	Listening on port 33107
+1650193664775	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 288: NS_ERROR_FAILURE: Should pass a non-null uri
+1650193673859	Marionette	INFO	Stopped listening on port 33107
+1650194706448	geckodriver	INFO	Listening on 127.0.0.1:54307
+1650194706476	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileV1NNpe"
+1650194708724	Marionette	INFO	Listening on port 38989
+1650194708811	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 288: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: http://selenium1py.pythonanywhere.com/ru/catalogue/coders-at-work_207/, line 614: ReferenceError: oscar is not defined
+1650194723471	Marionette	INFO	Stopped listening on port 38989

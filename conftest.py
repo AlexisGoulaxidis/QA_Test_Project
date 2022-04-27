@@ -12,10 +12,10 @@ import time
 def pytest_addoption(parser):  #make command for selectd file (name of test)
     parser.addoption('--browser_name', action='store', default=None,
                      help="Choose browser: opera or firefox", choices=('opera', 'firefox'))
-    parser.addoption('--language', action='store', default='en',
+    parser.addoption('--language', action='store', default='ru',
                      help='Choose language', choices=('en', 'ru', 'fr'))
     
-         
+#pytest -s -v --browser_name=" " --language=" "  test.py  / the way to change browser/language when testing, but browser needs to be installed         
 
 
 @pytest.fixture(scope="session", autouse=True) #if wanna target on function/class/method/session
@@ -23,7 +23,7 @@ def browser(request):
 	
 	browser_name = request.config.getoption("browser_name")  # Request get param from CMD
 	user_language = request.config.getoption("language")
-	# Request get Language value from CMD
+	
 	#starting
 	print('\n Start Browser for test')
 	
@@ -51,7 +51,7 @@ def browser(request):
 	browser.close()
 	browser.quit()
 		
-		#pytest -s -v --browser_name=" " --language=" "  test.py  / the way to change browser/language when testing, but browser needs to be installed
+		
 		
 		
 	
