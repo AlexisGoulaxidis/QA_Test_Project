@@ -11,8 +11,7 @@ class BasePage():
 	
 		self.browser = browser
 		self.url = url
-		#self.browser.implicitly_wait(timeout)
-		self.wait = WebDriverWait(browser, 15)
+		self.browser.implicitly_wait(timeout)
 	
 	def open(self):
 	
@@ -56,12 +55,14 @@ class BasePage():
 	def is_disappeared(self, how, what, timeout=4):
 		try:
 			WebDriverWait(self.browser, timeout, 1, TimeoutException).until_not(EC.presence_of_element_located((how, what)))
+			
 		except TimeoutException:
+		
 			return False
 		
 		return True
 		
 	def should_be_authorized_user(self):
 	
-		assert self.is_element_present(*BasePageLocators.LOGOUT_BUTTON), \
+		assert self.is_element_present(*BasePageLocators.ACCOUNT_ICON), \
 		'Logout button is not presented, probably unauthorized user'
