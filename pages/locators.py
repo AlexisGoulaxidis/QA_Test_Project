@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 
-
 class MainPageLocators():
 
     LOGIN_LINK = (By.CSS_SELECTOR, "#registration_link")
@@ -40,5 +39,5 @@ class BasePageLocators():
     LOGIN_LINK_INVALID = (By.XPATH, '//a[@id="login_link_inc"]')
     BASKET_LINK = (By.XPATH, '//a[@class="btn btn-default" and contains(@href, "/basket/")]')
     
-    LOGOUT_BUTTON = (By.XPATH, "//a[@id='logout_link']")
+    ACCOUNT_ICON = (By.XPATH, "//i[@class='icon-user']")
     
