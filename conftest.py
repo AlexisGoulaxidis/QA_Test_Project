@@ -1,4 +1,4 @@
-#this is config file for pytest fixtures to remember automaticaly in all tests in this directory
+#this is config file for pytest fixtures to remember automaticaly in all tests in this directory 
 
 import pytest
 from selenium import webdriver
