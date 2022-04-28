@@ -24,14 +24,18 @@ class BasketPageLocators():
 
     BASKET_LINK = 'http://selenium1py.pythonanywhere.com/ru/basket/'
     BASKET_BUTTON = (By.XPATH, '//button[@class="btn btn-lg btn-primary btn-add-to-basket"]')
-    BASKET_ITEMS = (By.XPATH, '//div[@class="basket-items"]')
-    BASKET_EMPTY_TEXT = (By.XPATH, '//div[@id="content_inner"]/p')
+
     
     PRODUCT_NAME = (By.XPATH, '//div[@class="col-sm-6 product_main"]/h1')
     PRODUCT_PRICE = (By.XPATH, '//div[@class="col-sm-6 product_main"]/p[@class="price_color"]')
     PRODUCT_ADDED_TEXT = (By.XPATH, '//div[@class="alertinner "]/strong')
     PRODUCT_ADDED_PRICE_TEXT = (By.XPATH, '//div[@class="alertinner "]/p/strong')
-    
+
+
+class CartPageLocators():
+
+    BASKET_ITEMS = (By.XPATH, '//div[@class="basket-items"]')
+    BASKET_EMPTY_TEXT = (By.XPATH, '//div[@id="content_inner"]/p')    
     
 class BasePageLocators():
 
