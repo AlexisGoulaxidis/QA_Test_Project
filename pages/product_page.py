@@ -43,10 +43,10 @@ class BasketPage(BasePage):
 		time.sleep(2)
 		try:
 		
+			self.wait.until(EC.alert_is_present())
 			alert = self.browser.switch_to.alert
 			print(f'Your code: {alert.text}')
 			alert.accept()
-			time.sleep(5)
 		except NoAlertPresentException:
 		
 			print('\nNo second Alert presented\n')
@@ -78,13 +78,4 @@ class BasketPage(BasePage):
 		assert self.is_disappeared(*BasketPageLocators.PRODUCT_ADDED_TEXT), \
 		'\nPRODUCT_ADDED_TEXT Is disappeared!\n'
 		
-	def should_not_be_items_in_basket(self):
 	
-		assert self.not_element_present(*BasketPageLocators.BASKET_ITEMS), \
-		'\n BASKET ITEMS IS PRESENTED! IT SHOULD\'T BE! \n'
-		
-	def should_be_text_about_empty_basket(self):
-	
-		assert self.is_element_present(*BasketPageLocators.BASKET_EMPTY_TEXT), \
-		'\n BASKET IS NOT EMPTY!\n'
-		
